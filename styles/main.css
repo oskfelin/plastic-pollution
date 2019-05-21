@@ -62,11 +62,13 @@ body .sick {
 body .plastic-img {
   height: 457px;
   width: 100vw;
+  -webkit-mask: url("../images/plastick.svg") no-repeat;
   mask: url("../images/plastick.svg") no-repeat;
 }
 body .pollution-1 {
   height: 175px;
   width: 100vw;
+  -webkit-mask: url("../images/1a.svg") no-repeat;
   mask: url("../images/1a.svg") no-repeat;
   position: relative;
   top: 1px;
@@ -77,6 +79,7 @@ body .pollution-1-wrapper {
 body .pollution-2 {
   width: 100vw;
   height: 1662px;
+  -webkit-mask: url("../images/2a.svg") no-repeat 233px 0;
   mask: url("../images/2a.svg") no-repeat 233px 0;
 }
 body .pollution-2-wrapper {
@@ -87,6 +90,7 @@ body .pollution-2-wrapper {
 body .pollution-3 {
   height: 175px;
   width: 100vw;
+  -webkit-mask: url("../images/3a.svg") no-repeat;
   mask: url("../images/3a.svg") no-repeat;
   position: relative;
   bottom: 2px;
