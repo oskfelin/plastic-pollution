@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plastic Pollution</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/jquery-3.4.1.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="container-fluid">
+    <div class="top-navbar">
+        <div class="logo-wrapper">
+            <div class="font-big">SICKPLASTICK.</div>
+            <div class="logo-bottom"><span class="font-small">Logg in</span><span class="font-big">COM</span>
+            </div>
+        </div>
+        <div>
+            <input class="type-city-input" type="text" placeholder="Type Your city">
+        </div>
+    </div>
+</nav>
+<main>
+    <!--    <img src="./images/map.svg" alt="">-->
+    <div class="plastic-img" style="background-color: #44F300"></div>
+    <div class="overflow-hidden">
+        <div class="sick"></div>
+    </div>
+    <div class="position-relative">
+        <!--        <div class="pollution-1-wrapper">-->
+        <div class="pollution-img pollution-1" style="background-color: #DB04FF"></div>
+        <!--        </div>-->
+        <div class="pollution-2-wrapper">
+            <div class="pollution-img pollution-2" style="background-color: #DB04FF"></div>
+        </div>
+        <div class="pollution-img pollution-3" style="background-color: #DB04FF"></div>
+        <div class="where-to-help font-big">
+            <div>WHERE</div>
+            <div>TO</div>
+            <ldiv>HELP</ldiv>
+        </div>
+        <div class="sea font-big">SEA</div>
+        <img src="./images/map.png" alt="map" class="map">
+    </div>
+</main>
+<!--<div class="ball-container" style="position: fixed; width: 100vw; height: 100vh; top: 0;">-->
+<!--    <div class="ball"></div>-->
+<!--</div>-->
+<script>
+    $(function () {
+        const plastic = $('.plastic-img');
+        const pollution = $('.pollution-img');
+        const pollutionScroll = $('.pollution-2-wrapper');
+        const ball = $('.ball');
+
+        (function loop() {
+            let random = Math.round(Math.random() * (900));
+            setTimeout(function () {
+                if (plastic.css("background-color") === "rgb(68, 243, 0)") {
+                    plastic.css({backgroundColor: '#DB04FF'})
+                } else if(plastic.css("background-color") === 'rgb(219, 4, 255)') {
+                    plastic.css({backgroundColor: '#44F300'})
+                }
+                loop();
+            }, random)
+        }());
+        (function loop2() {
+            let random = Math.round(Math.random() * (900));
+            setTimeout(function () {
+                if (pollution.css("background-color") === "rgb(68, 243, 0)") {
+                    pollution.css({backgroundColor: '#DB04FF'})
+                } else if(pollution.css("background-color") === 'rgb(219, 4, 255)') {
+                    pollution.css({backgroundColor: '#44F300'})
+                }
+                loop2();
+            }, random)
+        }());
+        document.addEventListener('wheel', (e) => {
+            let height = pollutionScroll.height();
+            let ballHeight = ball.height();
+            let ballWidth = ball.width();
+            if (e.deltaY > 0 && height < 1662 - 277) {
+                ball.height(ballHeight + 50);
+                ball.width(ballWidth + 50);
+                pollutionScroll.height(height + 277)
+            }
+            if (height >= 1662) {
+                // $('.pollution-1-wrapper').css({position: 'relative'})
+            }
+            if (window.pageYOffset > 260) {
+                $('.where-to-help').css({left: '50px'});
+                $('.sea').css({left: '1188px'});
+            }
+            if (window.pageYOffset > 1300) {
+                $('.map').css({right: '0'});
+                pollution.css({backgroundColor: '#ffffff'});
+                plastic.css({backgroundColor: '#ffffff'})
+            }
+        }, false)
+    })
+</script>
+</body>
+</html>

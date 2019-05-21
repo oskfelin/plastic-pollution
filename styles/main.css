@@ -1,0 +1,130 @@
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1920px, 0, 0);
+  }
+}
+@font-face {
+  font-family: font-heavy;
+  src: url(Helvetica-Neue-LT-Std-107-Extra-Black-Condensed_22505.ttf);
+}
+@font-face {
+  font-family: font-light;
+  src: url(Helvetica-Neue-LT-Std-45-Light_22520.ttf);
+}
+body {
+  overflow-x: hidden;
+  background-color: #000;
+  font-family: mainFont, sans-serif;
+}
+body .top-navbar {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .top-navbar .logo-wrapper {
+  line-height: 0.8;
+}
+body .font-big {
+  font-size: 29px;
+  color: #44F300;
+  font-weight: bold;
+}
+body .font-small {
+  color: #DB04FF;
+  font-size: 25px;
+  font-weight: bold;
+}
+body .logo-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 285px;
+}
+body .type-city-input {
+  color: #C6C6C6;
+  background-color: #5D5D5D;
+  outline: none;
+  border: 0;
+  padding: 0 10px;
+  font-size: 24px;
+  font-family: font-light, sans-serif;
+  width: 200px;
+}
+body .sick {
+  background: url("../images/sick.svg") repeat-x;
+  height: 118.5px;
+  width: 5760px;
+  animation: slide 10s linear infinite;
+}
+body .plastic-img {
+  height: 457px;
+  width: 100vw;
+  mask: url("../images/plastick.svg") no-repeat;
+}
+body .pollution-1 {
+  height: 175px;
+  width: 100vw;
+  mask: url("../images/1a.svg") no-repeat;
+  position: relative;
+  top: 1px;
+}
+body .pollution-1-wrapper {
+  background: #000;
+}
+body .pollution-2 {
+  width: 100vw;
+  height: 1662px;
+  mask: url("../images/2a.svg") no-repeat 233px 0;
+}
+body .pollution-2-wrapper {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.4s;
+}
+body .pollution-3 {
+  height: 175px;
+  width: 100vw;
+  mask: url("../images/3a.svg") no-repeat;
+  position: relative;
+  bottom: 2px;
+}
+body .where-to-help {
+  position: absolute;
+  top: 300px;
+  left: -200px;
+  transition: left 1s;
+}
+body .sea {
+  position: absolute;
+  top: 343px;
+  left: -200px;
+  transition: all 1s;
+}
+body .map {
+  position: absolute;
+  bottom: 0;
+  right: -2000px;
+  transition: all 1s;
+}
+body .ball-container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+body .ball-container .ball {
+  background: #DB04FF;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 7px #44F300;
+  transition: all 1s;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
