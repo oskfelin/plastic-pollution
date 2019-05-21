@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: font-heavy;
-  src: url(Helvetica-Neue-LT-Std-107-Extra-Black-Condensed_22505.ttf);
+  src: url(helvetica-compressed-5871d14b6903a.otf);
 }
 @font-face {
   font-family: font-light;
@@ -17,7 +17,7 @@
 body {
   overflow-x: hidden;
   background-color: #000;
-  font-family: mainFont, sans-serif;
+  font-family: font-heavy, sans-serif;
 }
 body .top-navbar {
   height: 150px;
@@ -31,17 +31,15 @@ body .top-navbar .logo-wrapper {
 body .font-big {
   font-size: 29px;
   color: #44F300;
-  font-weight: bold;
 }
 body .font-small {
   color: #DB04FF;
   font-size: 25px;
-  font-weight: bold;
 }
 body .logo-bottom {
   display: flex;
   justify-content: space-between;
-  width: 285px;
+  width: 195px;
 }
 body .type-city-input {
   color: #C6C6C6;
