@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./scripts/jquery-3.4.1.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
+    <script src="/scripts/jquery-ui.min.js"></script>
 </head>
 <body>
-<nav class="container-fluid">
+<nav class="top-menu">
     <div class="top-navbar">
         <div class="logo-wrapper">
             <div class="font-big">SICKPLASTICK.</div>
@@ -23,7 +24,7 @@
 </nav>
 <main>
     <div class="plastic-img" style="background-color: #44F300"></div>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden sick-wrapper">
         <div class="sick"></div>
     </div>
     <div class="position-relative">
@@ -37,28 +38,47 @@
         <div class="where-to-help font-big">
             <div>WHERE</div>
             <div>TO</div>
-            <ldiv>HELP</ldiv>
+            <div>HELP</div>
         </div>
         <div class="sea font-big">SEA</div>
         <img src="./images/map.png" alt="map" class="map">
     </div>
 </main>
-<!--<div class="ball-container" style="position: fixed; width: 100vw; height: 100vh; top: 0;">-->
-<!--    <div class="ball"></div>-->
-<!--</div>-->
+
+<div class="graph-container position-relative">
+    <div class="number-big-wrapper">
+        <div class="number-big">350</div>
+        <div class="million-tones">million</div>
+        <div class="million-tones">tones</div>
+    </div>
+    <div class="dot"></div>
+    <img src="./images/graph.svg" alt="" id="graph">
+</div>
+
+
+<div class="ball-container" style="position: fixed; width: 100vw; height: 100vh; top: 0;">
+    <div class="ball">
+        <span class="ball-login">LOG&nbsp;IN</span>
+    </div>
+</div>
 <script>
     $(function () {
         const plastic = $('.plastic-img');
         const pollution = $('.pollution-img');
         const pollutionScroll = $('.pollution-2-wrapper');
         const ball = $('.ball');
+        const ballLogin = $('.ball-login');
+        const graph = $('.graph-container');
+        const numberWrap = $('.number-big-wrapper');
+        const dot = $('.dot');
+        const numberBig = $('.number-big');
 
         (function loop() {
             let random = Math.round(Math.random() * (900));
             setTimeout(function () {
                 if (plastic.css("background-color") === "rgb(68, 243, 0)") {
                     plastic.css({backgroundColor: '#DB04FF'})
-                } else if(plastic.css("background-color") === 'rgb(219, 4, 255)') {
+                } else if (plastic.css("background-color") === 'rgb(219, 4, 255)') {
                     plastic.css({backgroundColor: '#44F300'})
                 }
                 loop();
@@ -69,23 +89,55 @@
             setTimeout(function () {
                 if (pollution.css("background-color") === "rgb(68, 243, 0)") {
                     pollution.css({backgroundColor: '#DB04FF'})
-                } else if(pollution.css("background-color") === 'rgb(219, 4, 255)') {
+                } else if (pollution.css("background-color") === 'rgb(219, 4, 255)') {
                     pollution.css({backgroundColor: '#44F300'})
                 }
                 loop2();
+            }, random)
+        }());
+        (function loop3() {
+            let random = Math.round(Math.random() * (900));
+            setTimeout(function () {
+                if (ball.css("background-color") === "rgb(68, 243, 0)") {
+                    ball.css({backgroundColor: '#DB04FF'})
+                } else {
+                    ball.css({backgroundColor: '#44F300'})
+                }
+                loop3();
+            }, random)
+        }());
+        (function loop4() {
+            let random = Math.round(Math.random() * (900));
+            setTimeout(function () {
+                if (numberBig.css("color") === "rgb(68, 243, 0)") {
+                    numberBig.css({color: '#DB04FF'})
+                } else {
+                    numberBig.css({color: '#44F300'})
+                }
+                loop4();
             }, random)
         }());
         document.addEventListener('wheel', (e) => {
             let height = pollutionScroll.height();
             let ballHeight = ball.height();
             let ballWidth = ball.width();
+            let ballFont = ballLogin.css('font-size');
+            let numberFont = ballFont.match(/\d/g);
+            numberFont = Number(numberFont.join(""));
             if (e.deltaY > 0 && height < 1662 - 277) {
-                ball.height(ballHeight + 50);
-                ball.width(ballWidth + 50);
+                if (numberFont < 100) {
+                    numberFont += 7;
+                    console.log(numberFont);
+                    ballLogin.css('font-size', `${numberFont}px`);
+                }
+                if (ballWidth < 450) {
+                    ball.height(ballHeight + 100);
+                    ball.width(ballWidth + 100);
+                }
                 pollutionScroll.height(height + 277)
             }
             if (height >= 1662) {
-                // $('.pollution-1-wrapper').css({position: 'relative'})
+                $('.pollution-1-wrapper').css({position: 'relative'})
             }
             if (window.pageYOffset > 260) {
                 $('.where-to-help').css({left: '50px'});
@@ -95,6 +147,15 @@
                 $('.map').css({right: '0'});
                 pollution.css({backgroundColor: '#ffffff'});
                 plastic.css({backgroundColor: '#ffffff'})
+            }
+            if (window.pageYOffset > 1400) {
+                graph.show();
+            }
+
+            if (window.pageYOffset > 1900) {
+                ball.hide();
+                numberWrap.css({left: '100px'});
+                dot.css({right: '0'});
             }
         }, false)
     })

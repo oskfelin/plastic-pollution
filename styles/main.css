@@ -6,6 +6,58 @@
     transform: translate3d(-1920px, 0, 0);
   }
 }
+@keyframes slideLeftRight {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(450px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-10px, 0, 0);
+  }
+}
+@keyframes ballAnimation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  8% {
+    transform: translate3d(calc(100vw - 100%), 30vh, 0);
+  }
+  16% {
+    transform: translate3d(0, 60vh, 0);
+  }
+  24% {
+    transform: translate3d(30vw, calc(100vh - 100%), 0);
+  }
+  32% {
+    transform: translate3d(calc(100vw - 100%), 30vh, 0);
+  }
+  40% {
+    transform: translate3d(70vw, 0, 0);
+  }
+  48% {
+    transform: translate3d(0, 80vh, 0);
+  }
+  56% {
+    transform: translate3d(calc(100vw - 100%), 90vh, 0);
+  }
+  62% {
+    transform: translate3d(calc(0 - 100%), 20vh, 0);
+  }
+  70% {
+    transform: translate3d(30vw, 0, 0);
+  }
+  78% {
+    transform: translate3d(0, 70vh, 0);
+  }
+  86% {
+    transform: translate3d(calc(100vw - 100%), 90vh, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
 @font-face {
   font-family: font-heavy;
   src: url(helvetica-compressed-5871d14b6903a.otf);
@@ -18,6 +70,9 @@ body {
   overflow-x: hidden;
   background-color: #000;
   font-family: font-heavy, sans-serif;
+}
+body .top-menu {
+  margin: 0 100px;
 }
 body .top-navbar {
   height: 150px;
@@ -42,26 +97,33 @@ body .logo-bottom {
   width: 195px;
 }
 body .type-city-input {
-  color: #C6C6C6;
-  background-color: #5D5D5D;
+  color: #000;
+  background-color: #fff;
   outline: none;
   border: 0;
   padding: 0 10px;
   font-size: 24px;
   font-family: font-light, sans-serif;
-  width: 200px;
+  width: 250px;
 }
-body .sick {
+body .sick-wrapper {
+  position: relative;
+  z-index: 1;
+}
+body .sick-wrapper .sick {
   background: url("../images/sick.svg") repeat-x;
   height: 118.5px;
   width: 5760px;
   animation: slide 10s linear infinite;
 }
 body .plastic-img {
-  height: 457px;
+  position: relative;
+  top: 11px;
+  height: 350px;
   width: 100vw;
   -webkit-mask: url("../images/plastick.svg") no-repeat;
   mask: url("../images/plastick.svg") no-repeat;
+  animation: slideLeftRight 5s linear infinite;
 }
 body .pollution-1 {
   height: 175px;
@@ -69,7 +131,7 @@ body .pollution-1 {
   -webkit-mask: url("../images/1a.svg") no-repeat;
   mask: url("../images/1a.svg") no-repeat;
   position: relative;
-  top: 1px;
+  bottom: 9px;
 }
 body .pollution-1-wrapper {
   background: #000;
@@ -84,6 +146,8 @@ body .pollution-2-wrapper {
   overflow: hidden;
   height: 0;
   transition: all 0.4s;
+  position: relative;
+  bottom: 11px;
 }
 body .pollution-3 {
   height: 175px;
@@ -91,7 +155,7 @@ body .pollution-3 {
   -webkit-mask: url("../images/3a.svg") no-repeat;
   mask: url("../images/3a.svg") no-repeat;
   position: relative;
-  bottom: 2px;
+  bottom: 12px;
 }
 body .where-to-help {
   position: absolute;
@@ -119,14 +183,64 @@ body .ball-container {
 }
 body .ball-container .ball {
   background: #DB04FF;
-  width: 1px;
-  height: 1px;
+  width: 100px;
+  height: 100px;
   position: absolute;
   border-radius: 50%;
   box-shadow: 0 0 7px #44F300;
   transition: all 1s;
   top: 0;
   left: 0;
+  animation: ballAnimation 70s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .ball-container .ball span {
+  font-family: font-heavy, sans-serif;
+  font-size: 12px;
+  color: #fff;
+}
+body .graph-container {
+  margin-top: 300px;
+  display: none;
+  margin-bottom: 20px;
+}
+body .graph-container .dot {
+  right: -2000px;
+  position: absolute;
+  top: -60px;
+  transition: all 1s;
+  width: 174px;
+  height: 174px;
+  background-color: #DB04FF;
+  border-radius: 50%;
+}
+body .graph-container .dot:before {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  right: 174px;
+  top: 87px;
+  width: 1010px;
+  z-index: -1;
+}
+body .graph-container .number-big-wrapper {
+  left: -1000px;
+  position: absolute;
+  transition: all 1s;
+  bottom: 220px;
+}
+body .graph-container .number-big-wrapper .number-big {
+  font-size: 455px;
+  color: #DB04FF;
+  line-height: 1;
+}
+body .graph-container .number-big-wrapper .million-tones {
+  font-size: 100px;
+  color: #fff;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

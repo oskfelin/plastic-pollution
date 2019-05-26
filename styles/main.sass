@@ -10,6 +10,42 @@ $light-grey: #C6C6C6
   100%
     transform: translate3d(-1920px, 0, 0)
 
+@keyframes slideLeftRight
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(450px, 0, 0)
+  100%
+    transform: translate3d(-10px, 0, 0)
+
+@keyframes ballAnimation
+  0%
+    transform: translate3d(0, 0, 0)
+  8%
+    transform: translate3d(calc(100vw - 100%), 30vh, 0)
+  16%
+    transform: translate3d(0, 60vh, 0)
+  24%
+    transform: translate3d(30vw, calc(100vh - 100%), 0)
+  32%
+    transform: translate3d(calc(100vw - 100%), 30vh, 0)
+  40%
+    transform: translate3d(70vw, 0, 0)
+  48%
+    transform: translate3d(0, 80vh, 0)
+  56%
+    transform: translate3d(calc(100vw - 100%), 90vh, 0)
+  62%
+    transform: translate3d(calc(0 - 100%), 20vh, 0)
+  70%
+    transform: translate3d(30vw, 0, 0)
+  78%
+    transform: translate3d(0, 70vh, 0)
+  86%
+    transform: translate3d(calc(100vw - 100%), 90vh, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
 
 @font-face
   font-family: font-heavy
@@ -23,81 +59,107 @@ body
   overflow-x: hidden
   background-color: #000
   font-family: font-heavy, sans-serif
+
+  .top-menu
+    margin: 0 100px
+
   .top-navbar
     height: 150px
     display: flex
     justify-content: space-between
     align-items: center
+
     .logo-wrapper
       line-height: 0.8
+
   .font-big
     font-size: 29px
     color: $green
+
   .font-small
     color: $purple
     font-size: 25px
+
   .logo-bottom
     display: flex
     justify-content: space-between
     width: 195px
+
   .type-city-input
-    color: $light-grey
-    background-color: $dark-grey
+    color: #000
+    background-color: #fff
     outline: none
     border: 0
     padding: 0 10px
     font-size: 24px
     font-family: font-light, sans-serif
-    width: 200px
-  .sick
-    background: url('../images/sick.svg') repeat-x
-    height: 118.5px
-    width: 5760px
-    animation: slide 10s linear infinite
+    width: 250px
+
+
+  .sick-wrapper
+    position: relative
+    z-index: 1
+    .sick
+      background: url('../images/sick.svg') repeat-x
+      height: 118.5px
+      width: 5760px
+      animation: slide 10s linear infinite
+
   .plastic-img
-    height: 457px
+    position: relative
+    top: 11px
+    height: 350px
     width: 100vw
     -webkit-mask: url("../images/plastick.svg") no-repeat
     mask: url("../images/plastick.svg") no-repeat
+    animation: slideLeftRight 5s linear infinite
+
   .pollution-1
     height: 175px
     width: 100vw
     -webkit-mask: url("../images/1a.svg") no-repeat
     mask: url("../images/1a.svg") no-repeat
     position: relative
-    top: 1px
+    bottom: 9px
+
   .pollution-1-wrapper
     //position: sticky
     background: #000
-    //top: 0
-    //z-index: 1
+  //top: 0
+  //z-index: 1
   .pollution-2
     width: 100vw
     height: 1662px
     -webkit-mask: url("../images/2a.svg") no-repeat 233px 0
     mask: url("../images/2a.svg") no-repeat 233px 0
+
   .pollution-2-wrapper
     overflow: hidden
     height: 0
     transition: all 0.4s
+    position: relative
+    bottom: 11px
+
   .pollution-3
     height: 175px
     width: 100vw
     -webkit-mask: url("../images/3a.svg") no-repeat
     mask: url("../images/3a.svg") no-repeat
     position: relative
-    bottom: 2px
+    bottom: 12px
 
   .where-to-help
     position: absolute
     top: 300px
     left: -200px
     transition: left 1s
+
   .sea
     position: absolute
     top: 343px
     left: -200px
     transition: all 1s
+
   .map
     position: absolute
     bottom: 0
@@ -109,13 +171,57 @@ body
     top: 0
     width: 100vw
     height: 100vh
+
     .ball
       background: $purple
-      width: 1px
-      height: 1px
+      width: 100px
+      height: 100px
       position: absolute
       border-radius: 50%
       box-shadow: 0 0 7px $green
       transition: all 1s
       top: 0
       left: 0
+      animation: ballAnimation 70s linear infinite
+      display: flex
+      justify-content: center
+      align-items: center
+      span
+        font-family: font-heavy, sans-serif
+        font-size: 12px
+        color: #fff
+  .graph-container
+    margin-top: 300px
+    display: none
+    margin-bottom: 20px
+    .dot
+      right: -2000px
+      position: absolute
+      top: -60px
+      transition: all 1s
+      width: 174px
+      height: 174px
+      background-color: $purple
+      border-radius: 50%
+      &:before
+        content: ''
+        display: block
+        border-bottom: 2px solid #fff
+        position: absolute
+        right: 174px
+        top: 87px
+        width: 1010px
+        z-index: -1
+    .number-big-wrapper
+      left: -1000px
+      position: absolute
+      transition: all 1s
+      bottom: 220px
+      .number-big
+        font-size: 455px
+        color: $purple
+        line-height: 1
+      .million-tones
+        font-size: 100px
+        color: #fff
+        margin-left: 20px
