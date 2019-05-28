@@ -172,6 +172,10 @@ body .sea {
   top: 343px;
   left: -200px;
   transition: all 1s;
+  cursor: pointer;
+}
+body .sea a {
+  color: inherit;
 }
 body .map {
   position: absolute;
@@ -184,6 +188,7 @@ body .ball-container {
   top: 0;
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
 }
 body .ball-container .ball {
   background: #DB04FF;
