@@ -112,6 +112,7 @@
 </main>
 <script>
     $(function () {
+
         const sea1 = $('.sea-1');
         const sea2 = $('.sea-2');
         const mp1 = $('.microplastics-p1');
@@ -124,17 +125,31 @@
         const dot = $('.dot');
         const numberBig = $('.number-big');
         let done = false;
-
+        (function loop() {
+            let random = Math.round(Math.random() * (600));
+            setTimeout(function () {
+                if (sea1.css("background-color") === "rgb(68, 243, 0)") {
+                    sea1.css({backgroundColor: '#fff'})
+                    sea2.css({backgroundColor: '#fff'})
+                } else if (sea1.css("background-color") === 'rgb(255, 255, 255)') {
+                    sea1.css({backgroundColor: '#44F300'})
+                    sea2.css({backgroundColor: '#44F300'})
+                }
+                loop();
+            }, random)
+        }());
         document.addEventListener('wheel', (e) => {
             if (!done) {
-                e.preventDefault()
+                e.preventDefault();
                 setTimeout(() => {
                     done = true;
                 }, 1000);
                 sea1.css({top: '170px'});
                 sea2.css({bottom: '-167px'});
                 mp1.show('slide');
-                mp2.show('slide')
+                mp2.show('slide');
+                sea1.css({backgroundColor: '#44F301'})
+                sea2.css({backgroundColor: '#44F301'})
             }
             if (done) {
                 console.log(window.pageYOffset )
