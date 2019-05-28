@@ -71,6 +71,9 @@ body {
   background-color: #000;
   font-family: font-heavy, sans-serif;
 }
+body.white {
+  background-color: #fff;
+}
 body .top-menu {
   margin: 0 100px;
 }
@@ -106,6 +109,10 @@ body .type-city-input {
   font-family: font-light, sans-serif;
   width: 250px;
 }
+body .type-city-input.black {
+  background-color: #C6C6C6;
+  color: #5D5D5D;
+}
 body .sick-wrapper {
   position: relative;
   z-index: 1;
@@ -132,9 +139,6 @@ body .pollution-1 {
   mask: url("../images/1a.svg") no-repeat;
   position: relative;
   bottom: 9px;
-}
-body .pollution-1-wrapper {
-  background: #000;
 }
 body .pollution-2 {
   width: 100vw;
@@ -241,6 +245,232 @@ body .graph-container .number-big-wrapper .million-tones {
   font-size: 100px;
   color: #fff;
   margin-left: 20px;
+}
+
+.sea-1 {
+  height: 193px;
+  -webkit-mask: url("../images/sea1.svg") no-repeat;
+  mask: url("../images/sea1.svg") no-repeat;
+  position: relative;
+  background-color: #44F300;
+  left: 269px;
+  top: 192px;
+  transition: top 1s;
+}
+
+.sea-2 {
+  height: 401px;
+  -webkit-mask: url("../images/sea2.svg") no-repeat;
+  mask: url("../images/sea2.svg") no-repeat;
+  position: relative;
+  bottom: 9px;
+  background-color: #44F300;
+  transition: bottom 1s;
+}
+
+.pollution-1-small {
+  height: 175px;
+  width: 1500px;
+  -webkit-mask: url("../images/1a.svg") no-repeat;
+  mask: url("../images/1a.svg") no-repeat;
+  position: relative;
+  left: 400px;
+}
+
+.pollution-2-small {
+  width: 1315px;
+  height: 1305px;
+  -webkit-mask: url("../images/2a.svg") no-repeat;
+  mask: url("../images/2a.svg") no-repeat;
+}
+
+.pollution-2-wrapper-small {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.4s;
+  position: relative;
+  bottom: 40px;
+  left: 584px;
+}
+
+.pollution-3-small {
+  height: 175px;
+  width: 1500px;
+  -webkit-mask: url("../images/3a.svg") no-repeat;
+  mask: url("../images/3a.svg") no-repeat;
+  position: relative;
+  bottom: 41px;
+  left: 400px;
+}
+
+.microplastics-p1 {
+  position: absolute;
+  width: 670px;
+  top: 370px;
+  left: 400px;
+  font-size: 25px;
+  font-family: font-light, sans-serif;
+  z-index: 2;
+  font-weight: 300;
+  display: none;
+}
+.microplastics-p1 .microplastics-title {
+  color: #DB04FF;
+  font-family: font-heavy, sans-serif;
+}
+
+.microplastics-p2 {
+  position: absolute;
+  width: 670px;
+  top: 515px;
+  left: 100px;
+  font-size: 25px;
+  font-family: font-light, sans-serif;
+  font-weight: 300;
+  z-index: 2;
+  text-shadow: 1px 1px 1px #fff;
+  display: none;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.background {
+  background: url("../images/background.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  height: 1280px;
+  top: 450px;
+  z-index: -1;
+}
+
+.there-is-plastic {
+  position: absolute;
+  font-size: 166px;
+  text-align: center;
+  top: 265px;
+  left: -3000px;
+  transition: all 1s;
+}
+
+.plastic-list-item {
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  left: -1000px;
+  z-index: 2;
+  transition: all 1s;
+}
+.plastic-list-item.one {
+  top: 850px;
+}
+.plastic-list-item.two {
+  top: 920px;
+}
+.plastic-list-item.three {
+  top: 990px;
+}
+.plastic-list-item.four {
+  top: 1060px;
+}
+
+.the-great-pacific {
+  color: #44F300;
+  font-size: 130px;
+  position: absolute;
+  left: -3000px;
+  z-index: 2;
+  transition: all 1s;
+  top: 1200px;
+}
+
+.the-great-pacific-small {
+  color: #fff;
+  position: absolute;
+  left: -3000px;
+  z-index: 2;
+  transition: all 1s;
+  font-size: 25px;
+  font-family: font-light, sans-serif;
+  font-weight: 300;
+  width: 900px;
+  top: 1400px;
+}
+
+.map-wrapper {
+  top: 2323px;
+  position: absolute;
+}
+.map-wrapper .map-black {
+  position: relative;
+  right: 3000px;
+  transition: all 1s;
+  z-index: 1;
+}
+.map-wrapper .bg-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  top: -150px;
+}
+.map-wrapper .bg-left {
+  width: 45%;
+  height: 2300px;
+  display: inline-block;
+}
+.map-wrapper .bg-left .links {
+  font-size: 20px;
+  width: calc(45vw - 10px);
+  position: absolute;
+  top: 1300px;
+  left: -5000px;
+  transition: all 1s;
+}
+.map-wrapper .bg-left .links h1 {
+  font-size: 100px;
+}
+.map-wrapper .bg-right {
+  position: absolute;
+  width: 55%;
+  height: 2300px;
+  background-color: #DB04FF;
+  display: inline-block;
+}
+.map-wrapper .bg-right .microplastics-white-big {
+  color: #fff;
+  font-size: 80px;
+  width: calc(55vw - 10px);
+  position: absolute;
+  top: 1300px;
+  left: -5000px;
+  transition: all 1s;
+}
+
+.dot-pacific-wrapper {
+  position: absolute;
+  left: -2000px;
+  top: 734px;
+  width: 1300px;
+  z-index: 1;
+}
+.dot-pacific-wrapper .dot-pacific {
+  background: #DB04FF;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 50px;
+  display: inline-block;
+}
+.dot-pacific-wrapper .the-great-pacific-green {
+  color: #44F300;
+  font-size: 50px;
+  width: 1000px;
+  display: inline-block;
+  top: -50px;
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

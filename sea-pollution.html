@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plastic Pollution</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/jquery-3.4.1.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="/scripts/jquery-ui.min.js"></script>
+</head>
+<body class="white">
+<nav class="top-menu">
+    <div class="top-navbar">
+        <div class="logo-wrapper">
+            <div class="font-big">SICKPLASTICK.</div>
+            <div class="logo-bottom"><span class="font-small">Log in</span><span class="font-big">COM</span>
+            </div>
+        </div>
+        <div>
+            <input class="type-city-input black" type="text" placeholder="Type Your city">
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="position-relative z-index-1" style="bottom: 150px">
+        <div class="sea-1"></div>
+        <div class="microplastics-p1">
+            <b class="microplastics-title">Microplastics</b><br>
+            Microplastics are not a specific kind of plastic, but rather
+            any type of plastic fragment that is less than five millimeters
+            in length according to the U.S.
+        </div>
+        <div class="microplastics-p2">
+            Microplastics are very small pieces of plastic that pollute
+            the environment.Microplastics are not a specific kind of plastic,
+            but rather any type of plastic fragment that is less than
+            five millimeters in length according to the U.S.
+            National Oceanic and Atmospheric Administration (NOAA).
+        </div>
+        <div class="sea-2"></div>
+    </div>
+    <div class="position-relative" style="bottom: 150px">
+        <div class="pollution-img pollution-1-small" style="background-color: #DB04FF"></div>
+        <div class="pollution-2-wrapper-small">
+            <div class="pollution-img pollution-2-small" style="background-color: #DB04FF"></div>
+        </div>
+        <div class="pollution-img pollution-3-small" style="background-color: #DB04FF"></div>
+        <div class="there-is-plastic">THERE&nbsp;IS&nbsp;PLASTIC&nbsp;IN&nbsp;FISH&nbsp;WE&nbsp;EAT</div>
+
+        <div class="background">        </div>
+
+        <div class="plastic-list-item one">Microplastics 0.05 - 0.5 cm</div>
+            <div class="plastic-list-item two">Mesoplastics 0.5 - 5 cm</div>
+            <div class="plastic-list-item three">Macroplastics 5 - 50 cm</div>
+            <div class="plastic-list-item four">Megaplastics: above 50cm</div>
+
+            <div class="the-great-pacific">THE GREAT PACIFIC GARBAGE PATCH</div>
+
+            <div class="the-great-pacific-small">The Great Pacific Garbage Patch is the largest accumulation<br/>
+                of ocean plastic in the world and is located between Hawaii<br/>
+                and California. Scientists of The Ocean Cleanup have conducted<br/>
+                the most extensive analysis ever of this area.
+            </div>
+    </div>
+    <div class="map-wrapper">
+        <img src="./images/map-black.png" alt="map" class="map-black">
+        <div class="bg-wrapper">
+            <div class="bg-left">
+                <div class="links">
+                    <h1>LEARN MORE:</h1>
+                    https://www.theoceancleanup.com/<br>
+                    https://www.theoceancleanup.com/great-pacific-garbage-patch/<br>
+                    https://www.wwf.org.uk/updates/take-action-plastic<br>
+                    https://www.surfrider.org/<br>
+                    https://storyofstuff.org/plastics/<br>
+                    https://plasticoceans.org/<br>
+                    https://plasticchange.org/<br>
+                    https://oceana.org/our-campaigns/stop_ocean_pollution/campaign<br>
+                    https://www.onegreenplanet.org/crushplastic/<br>
+                    https://www.nrdc.org/<br>
+                    http://www.greenpeace.org/archive-international/en/<br>
+                    https://friendsoftheearth.uk/plastics<br>
+                    https://www.theoceancleanup.com/<br>
+                    https://www.theoceancleanup.com/great-pacific-garbage-patch/<br>
+                    https://www.wwf.org.uk/updates/take-action-plastic<br>
+                    https://www.surfrider.org/<br>
+                    https://storyofstuff.org/plastics/<br>
+                    https://plasticoceans.org/<br>
+                    https://plasticchange.org/<br>
+                    https://oceana.org/our-campaigns/stop_ocean_pollution/campaign<br>
+                    https://www.onegreenplanet.org/crushplastic/<br>
+                    https://www.nrdc.org/<br>
+                    http://www.greenpeace.org/archive-international/en/<br>
+                    http://www.greenpeace.org/archive-international/en/<br>
+                    https://friendsoftheearth.uk/plasticshttps://plasticchange.org/<br>
+                    https://oceana.org/our-campaigns/stop_ocean_pollution/campaign
+                </div>
+            </div>
+            <div class="bg-right">
+                <div class="microplastics-white-big">Microplastics are very small pieces of plastic that pollute
+                    the environment.Microplastics are not a specific kind of plastic,<br>
+                    but rather any type of plastic fragment that is less than
+                    five millimeters in length according to the U.S.</div>
+            </div>
+        </div>
+        <div class="dot-pacific-wrapper">
+            <div class="dot-pacific"></div>
+            <div class="the-great-pacific-green">THE GREAT PACIFIC GARBAGE PATCH <br> IS AROUND THIS BIG.</div>
+        </div>
+    </div>
+</main>
+<script>
+    $(function () {
+        const sea1 = $('.sea-1');
+        const sea2 = $('.sea-2');
+        const mp1 = $('.microplastics-p1');
+        const mp2 = $('.microplastics-p2');
+        const pollutionScroll = $('.pollution-2-wrapper-small');
+        const ball = $('.ball');
+        const ballLogin = $('.ball-login');
+        const graph = $('.graph-container');
+        const numberWrap = $('.number-big-wrapper');
+        const dot = $('.dot');
+        const numberBig = $('.number-big');
+        let done = false;
+
+        document.addEventListener('wheel', (e) => {
+            if (!done) {
+                e.preventDefault()
+                setTimeout(() => {
+                    done = true;
+                }, 1000);
+                sea1.css({top: '170px'});
+                sea2.css({bottom: '-167px'});
+                mp1.show('slide');
+                mp2.show('slide')
+            }
+            if (done) {
+                console.log(window.pageYOffset )
+                let height = pollutionScroll.height();
+
+                if (e.deltaY > 0 && height < 1305 - 270) {
+                    pollutionScroll.height(height + 270)
+                }
+
+                if (window.pageYOffset > 50) {
+                    $('.there-is-plastic').css({left: '0'});
+                }
+                if (window.pageYOffset > 300) {
+                    $('.one').css({left: '100px'});
+                }
+                if (window.pageYOffset > 450) {
+                    $('.two').css({left: '100px'});
+                }
+                if (window.pageYOffset > 600) {
+                    $('.three').css({left: '100px'});
+                }
+                if (window.pageYOffset > 750) {
+                    $('.four').css({left: '100px'});
+                }
+                if (window.pageYOffset > 900) {
+                    $('.the-great-pacific').css({left: '100px'});
+                }
+
+                if (window.pageYOffset > 1100) {
+                    $('.the-great-pacific-small').css({left: '100px'});
+                }
+
+                if (window.pageYOffset > 1600) {
+                    $('.map-black').css({right: '0'});
+                }
+
+                if (window.pageYOffset > 2300) {
+                    $('.dot-pacific-wrapper').css({left: '150px'});
+                }
+
+                if (window.pageYOffset > 2600) {
+                    $('.links').css({left: '100px'});
+                    $('.microplastics-white-big').css({left: '10px'});
+                }
+            }
+        }, false)
+    })
+</script>
+</body>
+</html>
