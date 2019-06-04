@@ -1,0 +1,91 @@
+$green: #44F300
+$purple: #DB04FF
+$dark-grey: #5D5D5D
+$light-grey: #C6C6C6
+
+
+@keyframes slideLeftRight1
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(calc(100% - 50px), 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+
+@keyframes slideLeftRight2
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(calc(100% - 300px), 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@keyframes slideLeftRight3
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(100%, 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+//.login
+//  background: url("./../images/login.svg") center center
+//  height: 350px
+//  width: 100vh
+//  position: relative
+
+.login
+  -webkit-mask: url("./../images/login.svg")
+  mask: url("./../images/login.svg") no-repeat
+  height: 250px
+  width: 100vh
+  position: relative
+
+.login-1
+  left: 50px
+  animation: slideLeftRight1 10s linear infinite
+.login-2
+  left: 300px
+  animation: slideLeftRight2 12s linear infinite
+.login-3
+  left: 0
+  animation: slideLeftRight3 8s linear infinite
+
+.ball-container
+  display: flex
+  justify-content: center
+  align-items: center
+.ball
+  width: 500px !important
+  height: 500px !important
+  animation: none !important
+  position: relative !important
+  display: flex
+  flex-direction: column
+  input
+    margin: 20px
+  .login-button
+    font-size: 24px
+    text-align: center
+    cursor: pointer
+    background: $green
+    width: 250px
+    margin: 20px
+    &:hover
+      background: $purple
+      color: #fff
+      border: 2px solid #fff
+  .signup-button
+    font-size: 24px
+    text-align: center
+    cursor: pointer
+    width: 250px
+    background: $purple
+    color: #fff
+    border: 2px solid #fff
+    margin: 20px
+    &:hover
+      background: $green
+      color: #000
+      border: none

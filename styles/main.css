@@ -90,9 +90,15 @@ body .font-big {
   font-size: 29px;
   color: #44F300;
 }
+body .font-big a {
+  color: #44F300;
+}
 body .font-small {
   color: #DB04FF;
   font-size: 25px;
+}
+body .font-small a {
+  color: #DB04FF;
 }
 body .logo-bottom {
   display: flex;
@@ -110,8 +116,8 @@ body .type-city-input {
   width: 250px;
 }
 body .type-city-input.black {
-  background-color: #C6C6C6;
-  color: #5D5D5D;
+  background-color: #000;
+  color: #fff;
 }
 body .sick-wrapper {
   position: relative;
@@ -191,6 +197,7 @@ body .ball-container {
   pointer-events: none;
 }
 body .ball-container .ball {
+  pointer-events: all;
   background: #DB04FF;
   width: 100px;
   height: 100px;
@@ -476,6 +483,14 @@ body .graph-container .number-big-wrapper .million-tones {
   display: inline-block;
   top: -50px;
   position: relative;
+}
+
+.text-purple {
+  color: #DB04FF !important;
+}
+
+.pointer-event-none {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */

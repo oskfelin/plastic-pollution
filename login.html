@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plastic Pollution</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <script src="./scripts/jquery-3.4.1.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="/scripts/jquery-ui.min.js"></script>
+</head>
+<body>
+<nav class="top-menu">
+    <div class="top-navbar">
+        <div class="logo-wrapper">
+            <div class="font-big"><a href="index.html">SICKPLASTICK.</a></div>
+            <div class="logo-bottom">
+                <span class="font-small">Log in</span><span class="font-big"><a href="index.html">COM</a></span>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="login login-1" style="background-color: #44F300"></div>
+    <div class="login login-2" style="background-color: #44F300"></div>
+    <div class="login login-3" style="background-color: #DB04FF"></div>
+    <div class="login login-1" style="background-color: #44F300"></div>
+    <div class="login login-2" style="background-color: #44F300"></div>
+    <div class="login login-3" style="background-color: #DB04FF"></div>
+    <div class="login login-1" style="background-color: #44F300"></div>
+    <div class="login login-2" style="background-color: #44F300"></div>
+    <div class="login login-3" style="background-color: #DB04FF"></div>
+    <div class="login login-1" style="background-color: #44F300"></div>
+    <div class="login login-2" style="background-color: #44F300"></div>
+    <div class="login login-3" style="background-color: #DB04FF"></div>
+    <div class="login login-1" style="background-color: #44F300"></div>
+    <div class="login login-2" style="background-color: #44F300"></div>
+    <div class="login login-3" style="background-color: #DB04FF"></div>
+</main>
+<div class="ball-container" style="position: fixed; width: 100vw; height: 100vh; top: 0;">
+        <div class="ball">
+            <input class="type-city-input" type="text" placeholder="User">
+            <input class="type-city-input" type="password" placeholder="Password">
+            <div class="login-button">LOG IN</div>
+            <div class="signup-button">CREATE AN ACCOUNT</div>
+        </div>
+</div>
+<script>
+    $(function () {
+        const login1 = $('.login-1');
+        const login2 = $('.login-2');
+        const login3 = $('.login-3');
+
+        (function loop() {
+            let random = Math.round(Math.random() * (900));
+            setTimeout(function () {
+                if (login1.css("background-color") === "rgb(68, 243, 0)") {
+                    login1.css({backgroundColor: '#DB04FF'})
+                } else if (login1.css("background-color") === 'rgb(219, 4, 255)') {
+                    login1.css({backgroundColor: '#44F300'})
+                }
+                loop();
+            }, random)
+        }());
+        (function loop2() {
+            let random = Math.round(Math.random() * (600));
+            setTimeout(function () {
+                if (login2.css("background-color") === "rgb(68, 243, 0)") {
+                    login2.css({backgroundColor: '#DB04FF'})
+                } else if (login2.css("background-color") === 'rgb(219, 4, 255)') {
+                    login2.css({backgroundColor: '#44F300'})
+                }
+                loop2();
+            }, random)
+        }());
+        (function loop3() {
+            let random = Math.round(Math.random() * (800));
+            setTimeout(function () {
+                if (login3.css("background-color") === "rgb(68, 243, 0)") {
+                    login3.css({backgroundColor: '#DB04FF'})
+                } else {
+                    login3.css({backgroundColor: '#44F300'})
+                }
+                loop3();
+            }, random)
+        }());
+    })
+</script>
+</body>
+</html>

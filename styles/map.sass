@@ -1,0 +1,85 @@
+$green: #44F300
+$purple: #DB04FF
+$dark-grey: #5D5D5D
+$light-grey: #C6C6C6
+
+.map-navbar
+  border-bottom: 2px solid #fff
+  margin-right: 0
+  margin-left: 0
+
+.top-navbar
+  margin: 0 100px
+
+.map-background
+  padding: 30px
+  background-image: url("./../images/map.png")
+  background-size: 1305px
+  background-repeat: no-repeat
+  background-position: right 30px
+  height: 900px
+  width: 100%
+  .city-profile
+    width: 570px
+    height: 665px
+    border: 2px solid #fff
+    padding: 30px
+  .city-top-bar
+    margin-bottom: 60px
+  .type-city-input
+    width: 200px
+  .view-city-profile
+    background-color: $purple
+    color: #fff
+    font-weight: bolder
+    padding: 3px 10px
+    font-size: 24px
+    cursor: pointer
+    transition: all 0.1s
+    &:hover
+      background-color: $green
+  .city-header
+    color: #fff
+    font-size: 29px
+    border-bottom: 2px solid #fff
+  .chart-wrap
+    margin: 28px 0 10px
+    padding-bottom: 20px
+    //border-bottom: 2px solid #fff
+  .mini-chart
+    max-width: 100%
+
+
+.buttons-wrapper
+  margin: 50px 150px
+  display: flex
+  justify-content: space-between
+  .button
+    border: 1px solid #fff
+    width: 370px
+    height: 43px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 29px
+    color: $green
+    &:hover
+      background-color: $purple
+      color: #fff
+  .active-button
+    color: #fff
+    background: $green
+
+.section-wrapper
+  .wrapper-1
+    display: inline-flex
+    width: 50%
+    height: 1000px
+    background: $green
+    float: left
+  .wrapper-2
+    display: inline-flex
+    width: 50%
+    height: 1000px
+    background: $purple
+    float: right
