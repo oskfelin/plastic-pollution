@@ -8,31 +8,392 @@
     <link rel="stylesheet" href="./styles/map.css">
     <script src="./scripts/jquery-3.4.1.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
-    <script src="/scripts/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./styles/perfect-scrollbar.css">
+    <link rel="stylesheet" href="./styles/baguetteBox.min.css">
+    <!--    <script src="/scripts/jquery-ui.min.js"></script>-->
 </head>
-<body>
+<body style="height: 100vh; overflow: hidden">
 <nav class="map-navbar">
     <div class="top-navbar">
         <div class="logo-wrapper">
-            <div class="font-big"><a href="index.html">SICKPLASTICK.</a></div>
+            <div class="font-big"><a href="index.html">SICKPLASTIC.</a></div>
             <div class="logo-bottom">
-                <span class="font-small"><a href="./login.html">Log in</a></span><span class="font-big"><a href="index.html">COM</a></span>
+                <span class="font-small"><a href="./login.html">Log in</a></span><span class="font-big"><a
+                    href="index.html">COM</a></span>
             </div>
         </div>
-        <div><div class="font-big">Poland, <span class="text-purple">Gdansk</span></div></div>
+        <div>
+            <div class="font-big">Poland, <span class="text-purple">Gdansk</span></div>
+            <a href="./summary-personal.html">
+                <div class="font-big" style="line-height: 1">logged: <span class="text-purple">MuffinX74</span></div>
+            </a>
+        </div>
     </div>
 </nav>
 <main>
     <div class="buttons-wrapper">
         <div class="button active-button">MAIN</div>
-        <div class="button">EVENTS</div>
-        <div class="button">ORGANISATIONS</div>
-        <div class="button">SUMMARY</div>
+        <a href="./organisation.html"><div class="button">ORGANISATIONS</div></a>
+        <a href="./summary-city.html">
+            <div class="button">SUMMARY</div>
+        </a>
     </div>
-    <div class="section-wrapper">
-        <div class="wrapper-1"></div>
-        <div class="wrapper-2"></div>
+    <div class="section-wrapper gallery">
+        <div class="wrapper-1">
+            <div class="">
+                <div class="events-list-btn">
+                    204 <span>EVENTS</span>
+                </div>
+            </div>
+            <div class="list-wrapper" id="list2">
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-2">
+            <div class="">
+                <div class="events-list-btn">
+                    1469 <span>COMPLAINT</span>
+                </div>
+            </div>
+            <div class="list-wrapper" id="list1">
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <img class="list-img" src="./images/background.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="d-flex justify-content-around">
+                                <span class="font-header">Sprzątanie plaży na stogach</span>
+                            </div>
+                            <div>
+                                <span>Plaża na stogach, wejście nr. 3</span>
+                            </div>
+                            <div>22.08.2019, Start 10:00</div>
+                        </div>
+                        <div class="view-details-btn">VIEW DETAILS</div>
+                    </div>
+                    <div>
+                        <a href="./images/background.png">
+                            <div class="list-img"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
+<div id="popup-wrapper" style="display: none">
+    <div id="event-popup">
+        <div class="popup-map"></div>
+        <div class="popupContent">
+            <div class="d-flex justify-content-between text-white mb-3">
+                <span class="font-header">Sprzątanie plaży na stogach</span>
+                <span class="font-header">14.08.2019</span>
+            </div>
+            <div class="text-white text-thin">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+            </div>
+            <div class="d-flex justify-content-end mt-3 align-items-center">
+                    <span class="text-white">Signed in: <span class="text-green">2511</span></span>
+                    <div class="sign-in-btn ml-3">SIGN IN</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./scripts/baguetteBox.js"></script>
+<script src="./scripts/perfect-scrollbar.min.js"></script>
+<script>
+    const scrollWrapper1 = document.querySelector('#list1');
+    const scrollWrapper2 = document.querySelector('#list2');
+    const options = {
+        wheelSpeed: 2,
+        wheelPropagation: true,
+        minScrollbarLength: 20
+    };
+    const ps = new PerfectScrollbar(scrollWrapper1, options);
+    const ps2 = new PerfectScrollbar(scrollWrapper2, options)
+    baguetteBox.run('.gallery', {
+        // Custom options
+    });
+    const popopUp = $('#popup-wrapper');
+    const openPopup = $('.view-details-btn');
+    openPopup.click((e) => {
+        console.log('da')
+        popopUp.show()
+    });
+    popopUp.click(() => {
+        popopUp.hide()
+    })
+</script>
 </body>
 </html>

@@ -7,6 +7,8 @@ $light-grey: #C6C6C6
   border-bottom: 2px solid #fff
   margin-right: 0
   margin-left: 0
+  &.map-navbar-black
+    border: none
 
 .top-navbar
   margin: 0 100px
@@ -38,6 +40,8 @@ $light-grey: #C6C6C6
     transition: all 0.1s
     &:hover
       background-color: $green
+    a
+      color: #fff
   .city-header
     color: #fff
     font-size: 29px
@@ -51,7 +55,7 @@ $light-grey: #C6C6C6
 
 
 .buttons-wrapper
-  margin: 50px 150px
+  padding: 50px 150px
   display: flex
   justify-content: space-between
   .button
@@ -69,17 +73,80 @@ $light-grey: #C6C6C6
   .active-button
     color: #fff
     background: $green
+  .active-button-white
+    background: #fff
+  &.buttons-black
+    .button
+      border-color: #000
+      color: #000
 
 .section-wrapper
   .wrapper-1
-    display: inline-flex
+    display: inline-block
     width: 50%
-    height: 1000px
     background: $green
     float: left
   .wrapper-2
-    display: inline-flex
+    display: inline-block
     width: 50%
-    height: 1000px
     background: $purple
     float: right
+
+.events-list-btn
+  display: inline-block
+  font-size: 29px
+  background: #fff
+  padding: 0px 10px
+
+.list-wrapper
+  margin: 50px 0 0 150px
+  overflow-y: scroll
+  height: 700px
+  position: relative
+  .list-item
+    height: 200px
+    font-size: 18px
+    letter-spacing: 1px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 50px
+  .list-img
+    width: 300px
+    height: 200px
+.view-details-btn, .sign-in-btn
+  background-color: $purple
+  color: #fff
+  padding: 5px 10px
+  width: 150px
+  text-align: center
+  cursor: pointer
+
+.wrapper-2
+  .list-wrapper
+    color: #fff
+  .view-details-btn
+    background-color: $green
+    color: #000
+#popup-wrapper
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+#event-popup, .event-popup
+  margin-top: 250px
+  width: 900px
+  height: 600px
+  background-color: #000
+  padding: 50px
+  .popup-map
+    background: url("./../images/gogmapa.png") center center
+    background-size: cover
+    height: 300px
+    width: 100%
+.charts
+  width: 800px
+  margin: 50px

@@ -3,6 +3,9 @@
   margin-right: 0;
   margin-left: 0;
 }
+.map-navbar.map-navbar-black {
+  border: none;
+}
 
 .top-navbar {
   margin: 0 100px;
@@ -41,6 +44,9 @@
 .map-background .view-city-profile:hover {
   background-color: #44F300;
 }
+.map-background .view-city-profile a {
+  color: #fff;
+}
 .map-background .city-header {
   color: #fff;
   font-size: 29px;
@@ -55,7 +61,7 @@
 }
 
 .buttons-wrapper {
-  margin: 50px 150px;
+  padding: 50px 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -77,20 +83,98 @@
   color: #fff;
   background: #44F300;
 }
+.buttons-wrapper .active-button-white {
+  background: #fff;
+}
+.buttons-wrapper.buttons-black .button {
+  border-color: #000;
+  color: #000;
+}
 
 .section-wrapper .wrapper-1 {
-  display: inline-flex;
+  display: inline-block;
   width: 50%;
-  height: 1000px;
   background: #44F300;
   float: left;
 }
 .section-wrapper .wrapper-2 {
-  display: inline-flex;
+  display: inline-block;
   width: 50%;
-  height: 1000px;
   background: #DB04FF;
   float: right;
+}
+
+.events-list-btn {
+  display: inline-block;
+  font-size: 29px;
+  background: #fff;
+  padding: 0px 10px;
+}
+
+.list-wrapper {
+  margin: 50px 0 0 150px;
+  overflow-y: scroll;
+  height: 700px;
+  position: relative;
+}
+.list-wrapper .list-item {
+  height: 200px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.list-wrapper .list-img {
+  width: 300px;
+  height: 200px;
+}
+
+.view-details-btn, .sign-in-btn {
+  background-color: #DB04FF;
+  color: #fff;
+  padding: 5px 10px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.wrapper-2 .list-wrapper {
+  color: #fff;
+}
+.wrapper-2 .view-details-btn {
+  background-color: #44F300;
+  color: #000;
+}
+
+#popup-wrapper {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#event-popup, .event-popup {
+  margin-top: 250px;
+  width: 900px;
+  height: 600px;
+  background-color: #000;
+  padding: 50px;
+}
+#event-popup .popup-map, .event-popup .popup-map {
+  background: url("./../images/gogmapa.png") center center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.charts {
+  width: 800px;
+  margin: 50px;
 }
 
 /*# sourceMappingURL=map.css.map */

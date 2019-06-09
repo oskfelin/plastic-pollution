@@ -103,7 +103,7 @@ body .font-small a {
 body .logo-bottom {
   display: flex;
   justify-content: space-between;
-  width: 195px;
+  width: 181px;
 }
 body .type-city-input {
   color: #000;
@@ -491,6 +491,36 @@ body .graph-container .number-big-wrapper .million-tones {
 
 .pointer-event-none {
   pointer-events: none;
+}
+
+.font-header {
+  font-size: 29px;
+  margin-top: -5px;
+}
+
+.text-thin {
+  font-family: font-light, sans-serif;
+}
+
+.text-green {
+  color: #44F300;
+  font-size: 19px;
+}
+
+.bg-green {
+  background: #44F300;
+}
+
+.link-unstyled {
+  color: inherit;
+}
+.link-unstyled:hover {
+  text-decoration: none;
+}
+
+.my-50 {
+  margin-top: 50px;
+  margin-bottom: 35px;
 }
 
 /*# sourceMappingURL=main.css.map */
