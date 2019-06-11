@@ -214,6 +214,10 @@ body .map {
   right: -2000px;
   transition: all 1s;
 }
+body .map-gif {
+  width: 1920px;
+  height: 1255px;
+}
 body .ball-container {
   position: fixed;
   top: 0;
