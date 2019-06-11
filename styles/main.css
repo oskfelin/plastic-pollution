@@ -85,6 +85,9 @@ body .top-navbar {
 }
 body .top-navbar .logo-wrapper {
   line-height: 0.8;
+}
+body .top-navbar .logo-wrapper-1 {
+  line-height: 0.8;
   background: #fff;
   padding: 20px;
 }
@@ -97,7 +100,6 @@ body .font-big a {
 }
 body .font-big a.black {
   color: #000;
-  opacity: 1;
 }
 body .font-small {
   color: #DB04FF;
@@ -111,7 +113,7 @@ body .logo-bottom {
   justify-content: space-between;
   width: 181px;
 }
-body .type-city-input {
+body .type-city-input-1 {
   color: #000;
   background-color: #fff;
   outline: none;
@@ -121,8 +123,22 @@ body .type-city-input {
   width: 250px;
   text-align: center;
 }
-body .type-city-input::placeholder {
+body .type-city-input-1::placeholder {
   color: #000;
+}
+body .type-city-input-1.black {
+  background-color: #000;
+  color: #fff;
+}
+body .type-city-input {
+  color: #000;
+  background-color: #fff;
+  outline: none;
+  border: 0;
+  padding: 0 10px;
+  font-size: 24px;
+  font-family: font-light, sans-serif;
+  width: 250px;
 }
 body .type-city-input.black {
   background-color: #000;
@@ -443,6 +459,7 @@ body .graph-container .number-big-wrapper .million-tones {
   display: inline-block;
 }
 .map-wrapper .bg-left .links {
+  font-family: font-light;
   font-size: 20px;
   width: calc(45vw - 10px);
   position: absolute;
