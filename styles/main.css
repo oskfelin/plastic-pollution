@@ -85,6 +85,8 @@ body .top-navbar {
 }
 body .top-navbar .logo-wrapper {
   line-height: 0.8;
+  background: #fff;
+  padding: 20px;
 }
 body .font-big {
   font-size: 29px;
@@ -92,6 +94,10 @@ body .font-big {
 }
 body .font-big a {
   color: #44F300;
+}
+body .font-big a.black {
+  color: #000;
+  opacity: 1;
 }
 body .font-small {
   color: #DB04FF;
@@ -110,10 +116,13 @@ body .type-city-input {
   background-color: #fff;
   outline: none;
   border: 0;
-  padding: 0 10px;
+  padding: 20px 40px;
   font-size: 24px;
-  font-family: font-light, sans-serif;
   width: 250px;
+  text-align: center;
+}
+body .type-city-input::placeholder {
+  color: #000;
 }
 body .type-city-input.black {
   background-color: #000;
@@ -456,7 +465,7 @@ body .graph-container .number-big-wrapper .million-tones {
   font-size: 80px;
   width: calc(55vw - 10px);
   position: absolute;
-  top: 1300px;
+  top: 1315px;
   left: -5000px;
   transition: all 1s;
 }

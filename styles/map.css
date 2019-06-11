@@ -85,6 +85,8 @@
 }
 .buttons-wrapper .active-button-white {
   background: #fff;
+  border-color: #fff !important;
+  cursor: pointer;
 }
 .buttons-wrapper.buttons-black .button {
   border-color: #000;
