@@ -42,14 +42,18 @@
   cursor: pointer;
 }
 .order-bags-wrapper .order-preview .order-button:hover {
-  background: #000;
-  color: #44F300;
+  background: #DB04FF;
+  color: #fff;
 }
 .order-bags-wrapper .order-preview .order-info {
   color: #44F300;
   font-size: 22px;
   font-family: font-light;
   font-weight: bold;
+  cursor: pointer;
+}
+.order-bags-wrapper .order-preview .order-info:hover {
+  color: #DB04FF;
 }
 
 .popup {

@@ -19,7 +19,7 @@
         <div class="logo-wrapper-1">
             <div class="font-big"><a class="black" href="index.html">SICKPLASTIC.</a></div>
             <div class="logo-bottom">
-                <span class="font-small"><a href="./login.html">Log in</a> </span><span class="font-big"><a
+                <span class="font-small"><a href="./login.html">Log out</a> </span><span class="font-big"><a
                     class="black" href="index.html">COM</a></span>
             </div>
         </div>
@@ -60,15 +60,22 @@
             </div>
         </div>
     </div>
-    <div class="popup" style="display: none">
+    <div class="popup" id="popup" style="display: none">
         Your order has been accepted.<br/>
         Pick them at your chosen place
+    </div>
+    <div class="popup" id="popup2" style="display: none">
+        Your order has been accepted.<br/>
+        Pick them at your chosen place
+        fdsfd
+        dfdf
     </div>
 </main>
 <script>
     const orderItem = $('.order-item');
     const orderImg = $('.order-img');
-    const popup = $('.popup');
+    const popup = $('#popup');
+    const popup2 = $('#popup2');
     $(function () {
         orderItem.click(function (e) {
             orderItem.removeClass('active');
@@ -76,13 +83,20 @@
             let number = $(this).data('number');
             orderImg.hide();
             $('#' + number).show();
-        })
-        $('.order-button').click(() => {
+        });
+        $('body').click(() => {
+            popup.hide();
+            popup2.hide()
+        });
+        $('.order-button').click((e) => {
+            e.stopPropagation();
             popup.show()
         });
-        popup.click(() => {
-            popup.hide()
-        })
+        $('.order-info').click((e) => {
+            e.stopPropagation();
+            console.log(popup2)
+            popup2.show()
+        });
     })
 </script>
 
