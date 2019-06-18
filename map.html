@@ -14,18 +14,19 @@
 <nav class="map-navbar">
     <div class="top-navbar">
         <div class="logo-wrapper">
-            <div class="font-big"><a href="index.html">SICKPLASTIC.</a></div>
+            <div class="font-big"><a href="index.html" class="black">SICKPLASTIC.</a></div>
             <div class="logo-bottom">
-                <span class="font-small"><a href="./login.html">Log in</a></span><span class="font-big"><a href="index.html">COM</a></span>
+                <span class="font-small"><a href="./login.html">Log in</a></span><span class="font-big"><a class="black" href="index.html">COM</a></span>
             </div>
         </div>
     </div>
 </nav>
 <main>
     <div class="position-relative map-background">
+
         <div class="city-profile">
             <div class="d-flex justify-content-between city-top-bar">
-                <input class="type-city-input" type="text" placeholder="Gdansk">
+                <input class="city-input" type="text" placeholder="Type your city" value="Gdansk">
                 <div class="view-city-profile"><a href="./city.html">VIEW CITY PROFILE</a></div>
             </div>
             <div class="city-inner">
@@ -36,8 +37,16 @@
                 <img class="mini-chart" src="./images/mini-wykres2.png" alt="">
             </div>
         </div>
+        <div class="map-dot"></div>
     </div>
 
 </main>
+<script>
+    $(function () {
+        setInterval(() => {
+            $('.map-dot').toggle()
+        }, 500)
+    })
+</script>
 </body>
 </html>

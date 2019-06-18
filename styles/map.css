@@ -8,7 +8,7 @@
 }
 
 .top-navbar {
-  margin: 0 100px;
+  margin: 0;
 }
 
 .map-background {
@@ -80,8 +80,9 @@
   color: #fff;
 }
 .buttons-wrapper .active-button {
-  color: #fff;
+  color: #000;
   background: #44F300;
+  border-color: #44F300;
 }
 .buttons-wrapper .active-button-white {
   background: #fff;
@@ -126,6 +127,18 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  position: relative;
+}
+.list-wrapper .list-item:after {
+  display: block;
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid #000;
+  position: absolute;
+  bottom: -25px;
+}
+.list-wrapper .list-item.white:after {
+  border-color: #fff;
 }
 .list-wrapper .list-img {
   width: 300px;
@@ -177,6 +190,16 @@
 .charts {
   width: 800px;
   margin: 50px;
+}
+
+.map-dot {
+  background: #DB04FF;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 230px;
+  right: 590px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=map.css.map */

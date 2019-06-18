@@ -64,20 +64,26 @@ body
     background-color: #fff
 
   .top-menu
-    margin: 0 100px
+    margin: 0
 
   .top-navbar
     height: 150px
     display: flex
     justify-content: space-between
-    align-items: center
+    align-items: flex-start
 
     .logo-wrapper
       line-height: 0.8
+      background: #fff
+      padding: 20px
+      height: 90px
+      &.logo-wrapper-black
+        background: #000
     .logo-wrapper-1
       line-height: 0.8
       background: #fff
       padding: 20px
+      height: 90px
 
   .font-big
     font-size: 29px
@@ -108,6 +114,8 @@ body
     font-size: 24px
     width: 250px
     text-align: center
+    height: 90px
+    cursor: pointer
     &::placeholder
       color: #000
 
@@ -115,18 +123,41 @@ body
       background-color: #000
       color: #fff
 
+  .type-city-div
+    color: #000
+    background-color: #fff
+    outline: none
+    border: 0
+    padding: 23px 40px
+    font-size: 29px
+    width: 250px
+    text-align: center
+    height: 90px
+    cursor: pointer
+  .type-city-div-black
+    background: #000
+    color: #fff
+    border: 0
+    padding: 23px 40px
+    font-size: 29px
+    width: 250px
+    text-align: center
+    height: 90px
+    cursor: pointer
   .type-city-input
     color: #000
     background-color: #fff
     outline: none
     border: 0
-    padding: 0 10px
+    padding: 20px 40px
     font-size: 24px
-    font-family: font-light, sans-serif
     width: 250px
+    text-align: center
+    height: 90px
+    cursor: pointer
     &.black
       background-color: #000
-      color: #fff
+      color: #fff !important
 
 
   .sick-wrapper
@@ -493,3 +524,26 @@ body
 .my-50
   margin-top: 50px
   margin-bottom: 35px
+
+.right-navbar
+  background: #fff
+  height: 90px
+  padding: 0 20px
+  line-height: 0.9
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.city-input
+  color: #000
+  background-color: #fff
+  outline: none
+  border: 0
+  font-size: 24px
+  text-align: center
+
+.black
+  color: #000 !important
+
+.text-white
+  color: #fff !important

@@ -37,6 +37,7 @@
   height: 250px;
   width: 100vh;
   position: relative;
+  margin-bottom: -10px;
 }
 
 .login-1 {
@@ -70,6 +71,7 @@
 }
 .ball input {
   margin: 20px;
+  width: 250px;
 }
 .ball .login-button {
   font-size: 24px;

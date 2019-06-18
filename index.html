@@ -15,11 +15,14 @@
         <div class="logo-wrapper-1">
             <div class="font-big"><a class="black" href="index.html">SICKPLASTIC.</a></div>
             <div class="logo-bottom">
-                <span class="font-small"><a href="./login.html">Log in</a> </span><span class="font-big"><a class="black" href="index.html">COM</a></span>
+                <span class="font-small"><a href="./login.html">Log in</a> </span><span class="font-big"><a
+                    class="black" href="index.html">COM</a></span>
             </div>
         </div>
         <div>
-            <input class="type-city-input-1" type="text" placeholder="Find Your city">
+            <a href="./map.html">
+                <div class="type-city-div">FIND YOUR CITY</div>
+            </a>
         </div>
     </div>
 </nav>
@@ -36,9 +39,9 @@
         <div class="pollution-img pollution-3" style="background-color: #DB04FF"></div>
         <div class="where-to-help font-big">
             <a href="map.html">
-            <div>WHERE</div>
-            <div>TO</div>
-            <div>HELP</div>
+                <div>WHERE</div>
+                <div>TO</div>
+                <div>HELP</div>
             </a>
         </div>
         <div class="sea font-big"><a href="./sea-pollution.html">SEA</a></div>
@@ -60,9 +63,9 @@
 
 <div class="ball-container" style="position: fixed; width: 100vw; height: 100vh; top: 0;">
     <a href="login.html">
-    <div class="ball">
-        <span class="ball-login">LOG&nbsp;IN</span>
-    </div>
+        <div class="ball">
+            <span class="ball-login">LOG&nbsp;IN</span>
+        </div>
     </a>
 </div>
 <script>
@@ -143,20 +146,20 @@
             if (height >= 1662) {
                 $('.pollution-1-wrapper').css({position: 'relative'})
             }
-            if (window.pageYOffset > 260) {
+            if (window.pageYOffset > 160) {
                 $('.where-to-help').css({left: '50px'});
                 $('.sea').css({left: '1188px'});
             }
-            if (window.pageYOffset > 1000) {
+            if (window.pageYOffset > 900) {
                 $('.map').css({right: '0'});
                 pollution.css({backgroundColor: '#ffffff'});
                 plastic.css({backgroundColor: '#ffffff'})
             }
-            if (window.pageYOffset > 1400) {
+            if (window.pageYOffset > 1300) {
                 graph.show();
             }
 
-            if (window.pageYOffset > 1900) {
+            if (window.pageYOffset > 1700) {
                 ball.hide();
                 numberWrap.css({left: '100px'});
                 dot.css({right: '0'});

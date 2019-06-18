@@ -75,21 +75,28 @@ body.white {
   background-color: #fff;
 }
 body .top-menu {
-  margin: 0 100px;
+  margin: 0;
 }
 body .top-navbar {
   height: 150px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 body .top-navbar .logo-wrapper {
   line-height: 0.8;
+  background: #fff;
+  padding: 20px;
+  height: 90px;
+}
+body .top-navbar .logo-wrapper.logo-wrapper-black {
+  background: #000;
 }
 body .top-navbar .logo-wrapper-1 {
   line-height: 0.8;
   background: #fff;
   padding: 20px;
+  height: 90px;
 }
 body .font-big {
   font-size: 29px;
@@ -122,6 +129,8 @@ body .type-city-input-1 {
   font-size: 24px;
   width: 250px;
   text-align: center;
+  height: 90px;
+  cursor: pointer;
 }
 body .type-city-input-1::placeholder {
   color: #000;
@@ -130,19 +139,44 @@ body .type-city-input-1.black {
   background-color: #000;
   color: #fff;
 }
+body .type-city-div {
+  color: #000;
+  background-color: #fff;
+  outline: none;
+  border: 0;
+  padding: 23px 40px;
+  font-size: 29px;
+  width: 250px;
+  text-align: center;
+  height: 90px;
+  cursor: pointer;
+}
+body .type-city-div-black {
+  background: #000;
+  color: #fff;
+  border: 0;
+  padding: 23px 40px;
+  font-size: 29px;
+  width: 250px;
+  text-align: center;
+  height: 90px;
+  cursor: pointer;
+}
 body .type-city-input {
   color: #000;
   background-color: #fff;
   outline: none;
   border: 0;
-  padding: 0 10px;
+  padding: 20px 40px;
   font-size: 24px;
-  font-family: font-light, sans-serif;
   width: 250px;
+  text-align: center;
+  height: 90px;
+  cursor: pointer;
 }
 body .type-city-input.black {
   background-color: #000;
-  color: #fff;
+  color: #fff !important;
 }
 body .sick-wrapper {
   position: relative;
@@ -551,6 +585,33 @@ body .graph-container .number-big-wrapper .million-tones {
 .my-50 {
   margin-top: 50px;
   margin-bottom: 35px;
+}
+
+.right-navbar {
+  background: #fff;
+  height: 90px;
+  padding: 0 20px;
+  line-height: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.city-input {
+  color: #000;
+  background-color: #fff;
+  outline: none;
+  border: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.black {
+  color: #000 !important;
+}
+
+.text-white {
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=main.css.map */
